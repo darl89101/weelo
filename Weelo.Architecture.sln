@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weelo.Domain", "Weelo.Domain\Weelo.Domain.csproj", "{06AB66CE-62D9-40AF-8927-3A88F4B66D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weelo.DataAccess", "Weelo.DataAccess\Weelo.DataAccess.csproj", "{6E3B83E8-D000-4310-BCB6-50F3AE916081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weelo.tests", "Weelo.tests\Weelo.tests.csproj", "{25A3EA17-2EDE-4C20-8BC4-DC8EAAD2B9F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weelo.API", "Weelo.API\Weelo.API.csproj", "{47262E31-E6B0-485C-87C8-05D4567C8B6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06AB66CE-62D9-40AF-8927-3A88F4B66D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06AB66CE-62D9-40AF-8927-3A88F4B66D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06AB66CE-62D9-40AF-8927-3A88F4B66D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06AB66CE-62D9-40AF-8927-3A88F4B66D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3B83E8-D000-4310-BCB6-50F3AE916081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3B83E8-D000-4310-BCB6-50F3AE916081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3B83E8-D000-4310-BCB6-50F3AE916081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3B83E8-D000-4310-BCB6-50F3AE916081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25A3EA17-2EDE-4C20-8BC4-DC8EAAD2B9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A3EA17-2EDE-4C20-8BC4-DC8EAAD2B9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25A3EA17-2EDE-4C20-8BC4-DC8EAAD2B9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25A3EA17-2EDE-4C20-8BC4-DC8EAAD2B9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47262E31-E6B0-485C-87C8-05D4567C8B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47262E31-E6B0-485C-87C8-05D4567C8B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47262E31-E6B0-485C-87C8-05D4567C8B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47262E31-E6B0-485C-87C8-05D4567C8B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB3D3C71-9E45-46AE-84A0-CF4F088E7F26}
+	EndGlobalSection
+EndGlobal

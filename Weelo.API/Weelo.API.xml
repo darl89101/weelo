@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Weelo.API</name>
+    </assembly>
+    <members>
+        <member name="T:Weelo.API.Abstract.APIExtensions">
+            <summary>
+            Extensions for the API
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Abstract.APIExtensions.AddCustomSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configuración del swagger
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Weelo.API.Abstract.APIExtensions.UseCustomSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use Custom Swagger
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Weelo.API.Abstract.MapperExtensions">
+            <summary>
+            Automapper extensions
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Abstract.MapperExtensions.To``2(AutoMapper.IMapper,``0)">
+            <summary>
+            Resuelve el mapeo de dos entidades
+            </summary>
+            <typeparam name="TDestination"></typeparam>
+            <typeparam name="TSource"></typeparam>
+            <param name="mapper"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Abstract.MapperExtensions.To``1(AutoMapper.IMapper,System.Object)">
+            <summary>
+            Resuelve el mapeo de dos entidades
+            </summary>
+            <typeparam name="TDestination"></typeparam>
+            <param name="mapper"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Abstract.MapperExtensions.To``1(AutoMapper.IMapper,System.Object,System.Type,System.Type)">
+            <summary>
+            Resuel ve un mapeo
+            </summary>
+            <typeparam name="TDestination"></typeparam>
+            <param name="mapper"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weelo.API.Controllers.PropertyController">
+            <summary>
+            Property controller
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Controllers.PropertyController._facade">
+            <summary>
+            Property service instance
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.#ctor(Weelo.API.Facades.Interfaces.IPropertyFacade)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="facade"></param>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.SaleAsync(System.Int64,Weelo.API.Models.SaleModel)">
+            <summary>
+            Run a property sale
+            </summary>        
+            <remarks>
+            Sample request:
+            
+                POST /1
+                {
+                    "name": "Maria Paula Perdomo",
+                    "price": 45.2
+                }
+            
+            </remarks>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.CreateAsync(Weelo.API.Models.PropertyModel)">
+            <summary>
+            Create a new propery and owner
+            </summary>        
+            <remarks>
+            Sample request:
+            
+                POST /
+                {
+                    "name": "House model 1",
+                    "address": "Town street",
+                    "price": 45.2,
+                    "year": 2022,
+                    "owner": {
+                        "documentNumber": "1075245401",
+                        "name": "Diego Roldán",
+                        "address": "Cra 25",
+                        "photo": "",
+                        "birthDay": "1989-09-04"
+                    }
+                }
+            
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.UpdateAsync(System.Int64,Weelo.API.Models.UpdatePropertyModel)">
+            <summary>
+            Update a property
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT /1
+                {
+                    "name": "House model 1",
+                    "address": "Town street",
+                    "year": 2022
+                }
+            
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.AddImageToPropertyAsync(System.Int64,Weelo.API.Models.PropertyImageModel)">
+            <summary>
+            Add an image to property
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /addImage/1
+                {
+                    "files": [
+                        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...",
+                        ""data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAJHGJGJA/...""
+                    ]
+                }
+            
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.ChangePriceAsync(System.Int64,Weelo.API.Models.ChangePriceModel)">
+            <summary>
+            Change price of property
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT /changePrice/1
+                {
+                    "price": 45.87
+                }
+            
+            </remarks>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Controllers.PropertyController.GetByFilterAsync(Weelo.Domain.Models.PropertyFilter)">
+            <summary>
+            Find properties by filter
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /
+                {
+                    "name": "Diego",
+                    "address": "Cra 1",
+                    "year": 2022,
+                    "idOwner": 5
+                }
+            
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Weelo.API.Facades.Implementations.PropertyFacade">
+            <summary>
+            Facade of property
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Facades.Implementations.PropertyFacade._mapper">
+            <summary>
+            Automapper intance
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Facades.Implementations.PropertyFacade._ownerService">
+            <summary>
+            Service of owners
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Facades.Implementations.PropertyFacade._configuration">
+            <summary>
+            Configuration file
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Facades.Implementations.PropertyFacade._propertyService">
+            <summary>
+            Service of property
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Facades.Implementations.PropertyFacade._propertyTraceService">
+            <summary>
+            Property trace service
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.#ctor(AutoMapper.IMapper,Weelo.Domain.Interfaces.Services.IOwnerService,Microsoft.Extensions.Configuration.IConfiguration,Weelo.Domain.Interfaces.Services.IPropertyService,Weelo.Domain.Interfaces.Services.IPropertyTraceService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+            <param name="ownerService"></param>
+            <param name="configuration"></param>
+            <param name="propertyService"></param>
+            <param name="propertyTraceService"></param>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.CreateAsync(Weelo.API.Models.PropertyModel)">
+            <summary>
+            Create a property
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.SaleAsync(System.Int64,Weelo.API.Models.SaleModel)">
+            <summary>
+            Run a sale
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.AddImageAsync(System.Int64,Weelo.API.Models.PropertyImageModel)">
+            <summary>
+            Add an image to property
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.ChangePrice(System.Int64,Weelo.API.Models.ChangePriceModel)">
+            <summary>
+            Change price of property
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.UpdateAsync(System.Int64,Weelo.API.Models.UpdatePropertyModel)">
+            <summary>
+            Update a property
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Weelo.API.Facades.Implementations.PropertyFacade.GetPropertiesByFilterAsync(Weelo.Domain.Models.PropertyFilter)">
+            <summary>
+            /List all properties by filter
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Weelo.API.Facades.Interfaces.IPropertyFacade">
+            <summary>
+            Interface of property facade
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Facades.Interfaces.IPropertyFacade.SaleAsync(System.Int64,Weelo.API.Models.SaleModel)">
+            <summary>
+            Run a sale
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Interfaces.IPropertyFacade.CreateAsync(Weelo.API.Models.PropertyModel)">
+            <summary>
+            Create a propery and owner
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Interfaces.IPropertyFacade.AddImageAsync(System.Int64,Weelo.API.Models.PropertyImageModel)">
+            <summary>
+            Add a list of images
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Interfaces.IPropertyFacade.ChangePrice(System.Int64,Weelo.API.Models.ChangePriceModel)">
+            <summary>
+            Change price of property
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Interfaces.IPropertyFacade.UpdateAsync(System.Int64,Weelo.API.Models.UpdatePropertyModel)">
+            <summary>
+            Update a property
+            </summary>
+            <param name="propertyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Facades.Interfaces.IPropertyFacade.GetPropertiesByFilterAsync(Weelo.Domain.Models.PropertyFilter)">
+            <summary>
+            List all properties by filter
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weelo.API.Profiles.OwnerProfile">
+            <summary>
+            Owner profile
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Profiles.OwnerProfile.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Weelo.API.Profiles.PropertyProfile">
+            <summary>
+            Property profile
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Profiles.PropertyProfile.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Weelo.API.Validators.OwnerModelValidator">
+            <summary>
+            Owner validator configuration
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Validators.OwnerModelValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Weelo.API.Validators.PropertyImageModelValidator">
+            <summary>
+            Property validation configuration
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Validators.PropertyImageModelValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Weelo.API.Validators.PropertyModelValidator">
+            <summary>
+            Property validation configuration
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Validators.PropertyModelValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Weelo.API.Validators.UpdatePropertyModelValidator">
+            <summary>
+            Property validation configuration
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Validators.UpdatePropertyModelValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>
