@@ -8,6 +8,16 @@
 		{
 			"name": "CreateProperty",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNzZlMzQ5MS03NThhLWE3ZmEtZTA3Zi0xNDBjN2UwNzhjMjIiLCJpc3MiOiJ3d3cud2VlbG8uY29tIiwiaWF0IjoxNjQ0MjA3MDA1LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkYXJsODkxMCIsInN1YiI6ImRhcmw4OTEwIiwiZW1haWwiOiJkYXJsLjg5MTBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsIm5iZiI6MTY0NDIwNzAwNSwiZXhwIjoxNjQ0MjEwNjA1LCJhdWQiOiJ3d3cud2VlbG8uY29tIn0.yBbSLu2g0-xCkPCfYCeannhH8xB6_9Vz2_flRL4BImA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -35,6 +45,16 @@
 		{
 			"name": "addImage",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNzZlMzQ5MS03NThhLWE3ZmEtZTA3Zi0xNDBjN2UwNzhjMjIiLCJpc3MiOiJ3d3cud2VlbG8uY29tIiwiaWF0IjoxNjQ0MjA3MDA1LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkYXJsODkxMCIsInN1YiI6ImRhcmw4OTEwIiwiZW1haWwiOiJkYXJsLjg5MTBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsIm5iZiI6MTY0NDIwNzAwNSwiZXhwIjoxNjQ0MjEwNjA1LCJhdWQiOiJ3d3cud2VlbG8uY29tIn0.yBbSLu2g0-xCkPCfYCeannhH8xB6_9Vz2_flRL4BImA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -64,6 +84,16 @@
 		{
 			"name": "UpdateProperty",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNzZlMzQ5MS03NThhLWE3ZmEtZTA3Zi0xNDBjN2UwNzhjMjIiLCJpc3MiOiJ3d3cud2VlbG8uY29tIiwiaWF0IjoxNjQ0MjA3MDA1LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkYXJsODkxMCIsInN1YiI6ImRhcmw4OTEwIiwiZW1haWwiOiJkYXJsLjg5MTBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsIm5iZiI6MTY0NDIwNzAwNSwiZXhwIjoxNjQ0MjEwNjA1LCJhdWQiOiJ3d3cud2VlbG8uY29tIn0.yBbSLu2g0-xCkPCfYCeannhH8xB6_9Vz2_flRL4BImA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -92,6 +122,16 @@
 		{
 			"name": "changePrice",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNzZlMzQ5MS03NThhLWE3ZmEtZTA3Zi0xNDBjN2UwNzhjMjIiLCJpc3MiOiJ3d3cud2VlbG8uY29tIiwiaWF0IjoxNjQ0MjA3MDA1LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkYXJsODkxMCIsInN1YiI6ImRhcmw4OTEwIiwiZW1haWwiOiJkYXJsLjg5MTBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsIm5iZiI6MTY0NDIwNzAwNSwiZXhwIjoxNjQ0MjEwNjA1LCJhdWQiOiJ3d3cud2VlbG8uY29tIn0.yBbSLu2g0-xCkPCfYCeannhH8xB6_9Vz2_flRL4BImA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -124,6 +164,16 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNzZlMzQ5MS03NThhLWE3ZmEtZTA3Zi0xNDBjN2UwNzhjMjIiLCJpc3MiOiJ3d3cud2VlbG8uY29tIiwiaWF0IjoxNjQ0MjA3MDA1LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkYXJsODkxMCIsInN1YiI6ImRhcmw4OTEwIiwiZW1haWwiOiJkYXJsLjg5MTBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsIm5iZiI6MTY0NDIwNzAwNSwiZXhwIjoxNjQ0MjEwNjA1LCJhdWQiOiJ3d3cud2VlbG8uY29tIn0.yBbSLu2g0-xCkPCfYCeannhH8xB6_9Vz2_flRL4BImA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -151,6 +201,16 @@
 		{
 			"name": "Sale",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNzZlMzQ5MS03NThhLWE3ZmEtZTA3Zi0xNDBjN2UwNzhjMjIiLCJpc3MiOiJ3d3cud2VlbG8uY29tIiwiaWF0IjoxNjQ0MjA3MDA1LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkYXJsODkxMCIsInN1YiI6ImRhcmw4OTEwIiwiZW1haWwiOiJkYXJsLjg5MTBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6IkFGQzFCNkRELTc5QTMtNDBEMi1CNzI2LUYxRTBGMTlCODIzMyIsIm5iZiI6MTY0NDIwNzAwNSwiZXhwIjoxNjQ0MjEwNjA1LCJhdWQiOiJ3d3cud2VlbG8uY29tIn0.yBbSLu2g0-xCkPCfYCeannhH8xB6_9Vz2_flRL4BImA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -172,6 +232,34 @@
 						"property",
 						"sale",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"darl.8910@gmail.com\",\r\n    \"password\": \"qwerty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/auth/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
 					]
 				}
 			},

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Weelo.Domain.Entities;
 
 namespace Weelo.DataAccess;
@@ -6,7 +8,7 @@ namespace Weelo.DataAccess;
 /// <summary>
 /// App context
 /// </summary>
-public class AppContext : DbContext
+public class AppContext : IdentityDbContext<IdentityUser>
 {
     #region Constructors
     /// <summary>

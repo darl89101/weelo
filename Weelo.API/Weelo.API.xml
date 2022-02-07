@@ -9,6 +9,31 @@
             Extensions for the API
             </summary>
         </member>
+        <member name="M:Weelo.API.Abstract.APIExtensions.AddCustomAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Weelo.Domain.Models.JwtOptions)">
+            <summary>
+            Add jwt configuration
+            </summary>
+            <param name="services"></param>
+            <exception cref="T:Weelo.Domain.Exceptions.NotAuthorizeException"></exception>
+            <exception cref="T:Weelo.Domain.Exceptions.BadRequestException"></exception>
+        </member>
+        <member name="M:Weelo.API.Abstract.APIExtensions.LifetimeValidator(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SecurityToken,Microsoft.IdentityModel.Tokens.TokenValidationParameters)">
+            <summary>
+            Valida el token
+            </summary>
+            <param name="notBefore"></param>
+            <param name="expires"></param>
+            <param name="securityToken"></param>
+            <param name="validationParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weelo.API.Abstract.APIExtensions.AddCustomIdentityCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            add identity server
+            </summary>
+            <param name="services"></param>
+            <param name="connectionString"></param>
+        </member>
         <member name="M:Weelo.API.Abstract.APIExtensions.AddCustomSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Configuración del swagger
@@ -53,6 +78,39 @@
             <param name="mapper"></param>
             <param name="source"></param>
             <returns></returns>
+        </member>
+        <member name="T:Weelo.API.Controllers.AuthController">
+            <summary>
+            Auth controller
+            </summary>
+        </member>
+        <member name="F:Weelo.API.Controllers.AuthController._authService">
+            <summary>
+            Auth service
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Controllers.AuthController.#ctor(Weelo.Domain.Interfaces.Services.IAuthService)">
+            <summary>
+            Controller
+            </summary>
+            <param name="authService"></param>
+        </member>
+        <member name="M:Weelo.API.Controllers.AuthController.LoginAsync(Weelo.Domain.Models.LoginRequest)">
+             <summary>
+             Generate token
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /login
+                 {
+                    "Email": "darl.8910@gmail.com",
+                    "Password": "qwerty"
+                 }
+            
+             </remarks>
+             <param name="model"></param>
+             <returns>A newly created TodoItem</returns>
         </member>
         <member name="T:Weelo.API.Controllers.PropertyController">
             <summary>
@@ -370,6 +428,16 @@
             </summary>
         </member>
         <member name="M:Weelo.API.Validators.PropertyModelValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Weelo.API.Validators.SaleModelValidator">
+            <summary>
+            Property validation configuration
+            </summary>
+        </member>
+        <member name="M:Weelo.API.Validators.SaleModelValidator.#ctor">
             <summary>
             Constructor
             </summary>

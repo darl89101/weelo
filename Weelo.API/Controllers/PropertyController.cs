@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Weelo.API.Facades.Interfaces;
 using Weelo.API.Models;
 using Weelo.Domain.Attributes;
@@ -9,6 +10,7 @@ namespace Weelo.API.Controllers
     /// <summary>
     /// Property controller
     /// </summary>
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PropertyController : ControllerBase
